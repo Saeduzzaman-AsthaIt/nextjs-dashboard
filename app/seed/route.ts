@@ -1,6 +1,6 @@
-// import bcrypt from 'bcrypt';
-// import { db } from '@vercel/postgres';
-// import { invoices, customers, revenue, users } from '../lib/placeholder-data';
+import bcrypt from 'bcrypt';
+import { db } from '@vercel/postgres';
+import { invoices, customers, revenue, users } from '../lib/placeholder-data';
 
 // const client = await db.connect();
 
@@ -102,10 +102,6 @@
 // }
 
 export async function GET() {
-  return Response.json({
-    message:
-      'Uncomment this file and remove this line. You can delete this file when you are finished.',
-  });
   // try {
   //   await client.sql`BEGIN`;
   //   await seedUsers();
@@ -114,7 +110,11 @@ export async function GET() {
   //   await seedRevenue();
   //   await client.sql`COMMIT`;
 
-  //   return Response.json({ message: 'Database seeded successfully' });
+  //   // return Response.json({ message: 'Database seeded successfully' });
+  //   return Response.json({
+  //     message:
+  //       'Different - Uncomment this file and remove this line. You can delete this file when you are finished.',
+  //   });
   // } catch (error) {
   //   await client.sql`ROLLBACK`;
   //   return Response.json({ error }, { status: 500 });
